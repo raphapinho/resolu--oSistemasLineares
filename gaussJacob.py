@@ -1,4 +1,7 @@
 import numpy as np
+import timeit
+
+start = timeit.default_timer()
   
 # 1st argument --> numbers ranging from 0 to 9, 
 # 2nd argument, row = 2, col = 3
@@ -28,3 +31,7 @@ def gaussJacobi(A,b,vetorS,iteracoes):
     print(f"numero de iterações: {iteracao}")
 
 gaussJacobi(array,[1,-1],[0,0],30)
+
+stop = timeit.default_timer()
+
+print('Time: ', stop - start) 
