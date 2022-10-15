@@ -1,9 +1,8 @@
 #para sistemas esparsos
 import matplotlib.pyplot as plt
-plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')
-plt.axis([0, 6, 0, 20])
-plt.ylabel('some numbers')
-plt.xlabel('tua mae')
+plt.plot([10, 1000, 2000, 3000], [1, 4, 9, 16])
+plt.ylabel('tamanho da metrix')
+plt.xlabel('numero de interações')
 plt.show()
 
 #para sistemas densos

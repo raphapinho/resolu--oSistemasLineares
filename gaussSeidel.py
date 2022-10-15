@@ -1,8 +1,13 @@
 import numpy as np
-  
-# 1st argument --> numbers ranging from 0 to 9, 
-# 2nd argument, row = 2, col = 3
-lista = [10,1000,2000]
+import matplotlib.pyplot as plt
+
+#lista = [10,1000,2000]
+lista = []
+listaItera = []
+n = 0
+while n <20000:
+    n += 1000
+    lista.append(n)
 
 for i in range(len(lista)):
     #n = int(input("coloque o tamanho da matriz:\n"))
@@ -26,6 +31,16 @@ def gaussSeidel(A,b,vetorS,iteracoes):
             x /= A[i][i]
             vetorS[i] = x
         iteracao += 1
-    print(vetorS)
+    return iteracao
 
-gaussSeidel(array,y,x,10)
+for j in range(len(lista)):
+    listaItera.append(gaussSeidel(array,y,x,10))
+
+
+
+lis = np.array(lista)
+lis2 = np.array(listaItera)
+plt.plot(lis, lis2)
+plt.ylabel('tamanho da metriz')
+plt.xlabel('numero de interações')
+plt.show()

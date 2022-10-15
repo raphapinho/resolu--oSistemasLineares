@@ -3,10 +3,11 @@ import timeit
 
 start = timeit.default_timer()
   
-# 1st argument --> numbers ranging from 0 to 9, 
-# 2nd argument, row = 2, col = 3
-array = np.random.randint(10, size=(2, 2))
-print(array)
+lista = [10,1000,2000]
+
+for i in range(len(lista)):
+    array = np.random.randint(10, size=(lista[i], lista[i]))
+    print(array)
 
 def gaussJacobi(A,b,vetorS,iteracoes):
     iteracao = 0
